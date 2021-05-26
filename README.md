@@ -17,6 +17,7 @@ You will need a FASTA formatted version of the reference genome that you are wor
 # BASH scripts (least user-friendly) 
 ## Software Dependencies 
 - *[Java 8] (https://java.com/en/download/)* (aka Java 1.8) or later 
+- This is the *[Markdown Guide](https://www.markdownguide.org)*
 - [trimmomatic] http://www.usadellab.org/cms/?page=trimmomatic verion 0.33 or later 
 - [fgbio] https://github.com/fulcrumgenomics/fgbio
 - samtools 1.9 or later
