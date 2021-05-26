@@ -16,10 +16,9 @@ You will need a FASTA formatted version of the reference genome that you are wor
 
 # BASH scripts (least user-friendly) 
 ## Software Dependencies 
-- *[Java 8] (https://java.com/en/download/)* (aka Java 1.8) or later 
-- This is the *[Markdown Guide](https://www.markdownguide.org)*
-- [trimmomatic] http://www.usadellab.org/cms/?page=trimmomatic verion 0.33 or later 
-- [fgbio] https://github.com/fulcrumgenomics/fgbio
+- *[Java 8](https://java.com/en/download/)* (aka Java 1.8) or later 
+- *[trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic)* verion 0.33 or later 
+- *[fgbio](https://github.com/fulcrumgenomics/fgbio)*
 - samtools 1.9 or later
 - bwa
 - picard tools
@@ -32,14 +31,4 @@ All scripts will need to be edited to be used with your compute enviroment. Edit
 ## indexNewGenome.sh
 Helper script to create bwa, picard tools and samtools indices from FASTA reference genomes. 
 
-## run_trimUMI_CURRENT.sh
-This script using trimmomatic to remove Illumina specific adapters off the sequences in the provided FASTQ files. 
-
-## run_MDS_CURRENT.sh
-This script takes the trimmed FASTQ files and performs the steps needed to generate consensus sequenes based on UMIs and align them to the relevant genome. Again edits will be needed to work with your dataset. The fgbio GroupReadsByUMI step is the most time consuming and memory intesive step in the whole pipeline. 
-
-## runmpileup.sh
-This script take the sorted BAM files genereated in the last step of the pipeline above and generates counts of each NT at each location in the sequenced region with bcftools mpileup. The -d flag is needed to allow all of the alignments to be used in the pileup the default is to use the first XXX alignments. -a adds the AD and DP fields to the output and is needed for downstream mutational spectrum analysis
-
-
-
+## by_Sample
